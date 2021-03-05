@@ -479,7 +479,7 @@ ul {
 .commander {
   display: flex;
   justify-content: center;
-  margin: 32px 0;
+  padding: 40px 0;
 }
 .commander__btn {
   padding: 15px 30px;
