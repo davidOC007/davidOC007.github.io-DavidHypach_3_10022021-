@@ -1,0 +1,168 @@
+/* MENU */
+
+.maincontainer{
+  background-color: #f6f6f6;
+  border-radius: 40px;
+  position: relative;
+  margin-top:-50px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 0 16px;
+        &__title{
+            font-family: "Shrikhand", sans-serif;
+            font-size: 28px;
+            font-weight: 500;
+            &__heart{
+            margin-right: 30px;    
+        }
+    }
+}
+
+.step{
+    padding:0 16px;
+    &__title{
+        text-transform: uppercase;
+        font-weight: 300;
+        &::after{
+            content: "";
+            width: 48px;
+            height: 4px;
+            background-color: $color-tertiary;
+            display: block;
+        }
+    }
+}
+
+.dish {
+  display:flex;
+  margin-bottom: 16px;
+  background-color:#fff;
+  border-radius: 18px;
+  box-shadow: $shadow-base;
+  overflow:hidden;
+  cursor: pointer;
+}
+
+/* APPARITION DES MENUS */
+
+.slide-1{
+    animation: slide 1s ease-out;
+    opacity: 1;
+  }
+  
+  .slide-2{
+    animation: slide 1s 0.2s ease-out;
+    opacity: 1;
+  }
+  
+  .slide-3{
+    animation: slide 1s 0.3s ease-out;
+    opacity: 1;
+  }
+  
+  .slide-4{
+    animation: slide 1s 0.4s ease-out;
+    opacity: 1;
+  }
+
+/* DESCRIPTION DES PLATS */
+
+.dish__desc{
+    flex:1;
+    padding-left: 12px;
+    overflow: hidden;
+
+    p, h4{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    h4{
+      margin-bottom: 0.3em;
+      font-weight: bolder;
+      font-size: 18px;
+    }
+
+    p{
+      margin-top: 0;
+      font-weight: 200;
+    }
+  }
+
+/* AFFICHAGE PRIX et SELECTION DU PLAT */
+
+.dish__price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-weight: bold;
+    margin-right: -20px;
+    transform: translateX(100%);
+    transition-duration:0.5s; 
+  }
+
+.dish__check{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:$color-tertiary;
+  width:70px;
+  border:none;
+  cursor:pointer;
+  transform:translateX(100%);
+  transition-duration:0.5s;
+
+  & .fas{
+    color: #fff;
+    font-size: 2em;
+  }
+}
+
+.dish:hover >.dish__check{
+    transform:translateX(0%);
+
+}
+
+.dish:hover >.dish__price{
+    transform:translateX(-120%);
+    margin-left:40px;
+}
+
+.dish:hover .fas{
+    transform:rotate(1turn);
+    transition-duration:0.5s;
+}
+  
+
+
+/* BOUTON COMMANDER */
+
+.commander{
+    display: flex;
+    justify-content: center;
+    margin:32px 0;
+    &__btn{
+        padding:15px 30px;
+        @include mainbtn;
+    }   
+}
+
+@media screen and (min-width: 1024px){
+
+    .steps{
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .step{
+        max-width: 30%;
+        min-width: 30%;
+    }
+
+}
+

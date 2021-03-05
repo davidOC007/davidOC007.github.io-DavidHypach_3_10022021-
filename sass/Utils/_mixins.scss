@@ -1,0 +1,20 @@
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin mainbtn{
+    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+                border: none;
+                border-radius: 30px;
+                color: #fff;
+                font-size:17px;
+                cursor:pointer;
+                box-shadow: $shadow-base;
+                    &:hover{
+                        opacity:0.8;
+                        box-shadow: 4px 4px 6px #aaa;
+                                             
+                }  
+}

@@ -1,0 +1,49 @@
+/* Animation du loading-spinner */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/* Apparition des cartes du menu */
+
+@keyframes slide{
+    from{
+      opacity:0;
+      transform:translateY(60%);
+    }
+    to{
+      transform:translateY(0%);
+    }
+  }
+  
+ 
+  /* Coeur qui se remplit au survol */
+
+@keyframes fill{
+  0%{
+      opacity: 0;
+  }
+  50%{
+      opacity: 0.5;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+

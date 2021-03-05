@@ -1,0 +1,240 @@
+/* LOADING SPINNER */
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    margin-top: -20px;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    animation: fade 0.5s 3s ease-in forwards;
+    &__logo{
+        font-family:"Shrikhand", "Roboto", sans-serif;
+    }
+  }
+
+.circle {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-bottom: solid 2px $color-primary;
+    border-top: solid 2px $color-secondary;
+    animation: rotate 1s linear 4;
+}
+  
+
+
+/* SECTION ACCROCHE */
+
+.localisation{
+    @include flexcenter;
+    background-color: #f3f3f3;
+    box-shadow: inset 0 5px 5px 0 #dddddd;
+    &__text{
+        background-color: #f3f3f3;
+        padding:20px 8px;
+        margin-top: 5px;
+        text-align: center;
+        border:none;
+        width: 140px;
+        font-size: 18px;  
+        outline: none;
+    }
+}
+
+.accroche{
+    background-color: #fafafa;
+    padding:32px;
+    text-align: center;
+
+    &__title{
+        margin:0;
+        font-size: 24px;
+        font-weight: 900;
+    }
+        &__text{
+            color:#332f2fb9;
+            padding-bottom: 25px;
+            font-size: 17px;
+        }
+            &__btn{
+                padding:15px 25px;
+                @include mainbtn;
+        }
+}
+
+
+
+/* SECTION FONCTIONNEMENT */
+
+.use{
+    padding:32px 16px;
+    &__title{
+        font-size: 20px;
+    }
+        &__step{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin:0 0 20px 0;
+            background-color: #f6f6f6;
+            border:5px solid #f6f6f6;
+            border-radius: 10px;
+            box-shadow: $shadow-base;
+            font-weight: bold;
+            border:none;
+            &:hover{
+                background-color: #f3e3f8;
+
+            .use__icon{
+                color:$color-primary;
+            }
+        }
+    }
+            &__icon{
+                color:#b2b2b2;
+                margin:0 20px;
+                width: 20px;
+            }
+}
+
+.order{
+    @include flexcenter;
+    width: 25px;
+    height: 25px;
+    background-color: $color-primary;
+    color:#fff;
+    border-radius: 100%;
+    position: relative;
+    right:10px;
+}
+
+
+/* SECTION RESTAURANTS */
+
+.restaurants{
+    padding:32px 16px;
+    background-color: #f6f6f6;
+    &__title{
+        font-size: 24px;
+    }
+}
+
+
+.card{
+    position: relative;
+    margin:20px 0;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    box-shadow: $shadow-base;
+    background-color: #fff;
+
+    &__img{
+        width: 100%;
+        height:200px;
+        object-fit: cover;
+        border-radius:25px 25px 0 0;
+    }
+
+    &__new{
+        background-color: $color-tertiary;
+        color:#1b6150;
+        padding:8px;
+        border-radius:10px;
+        position: absolute;
+        top:15px;
+        right:10px;
+    }
+
+    &__legend{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title{
+        margin:0;
+        margin-top:5px;
+        padding-left: 10px;
+    }
+
+    &__maintitle{
+        margin:0;
+    }
+
+    &__subtitle{
+        margin:0;
+        margin-top:5px;
+    }
+
+    &__heart{
+        margin-right: 20px;
+    }
+}
+
+/* REMPLISSAGE DU COEUR */
+
+.card__heart .far{
+    color: #000;
+    cursor:pointer;
+  }
+  
+  .far:hover {
+    animation: fill 1s ease-out;
+    opacity: 1;
+    background: linear-gradient(to right, #FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight:bold;
+  }
+
+/* AFFICHAGE TABLETTE */
+
+@media screen and (min-width: 768px){
+
+   .restaurants_container{
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+      
+   } 
+
+   .card{
+       min-width: 45%;
+       max-width: 45%;
+       margin-right: 20px;
+   }
+    
+}
+
+/* AFFICHAGE DESKTOP */
+
+@media screen and (min-width: 1024px){
+
+
+    .use__container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .use__step{
+        padding-right:20px;
+    }
+} 
+
+/* AFFICHAGE GRANDS ECRANS */
+
+@media screen and (min-width: 1600px){
+
+    #bloc_page{
+            max-width: 1600px;
+            margin:auto;
+    }
+}
+
+
+
