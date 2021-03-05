@@ -143,13 +143,13 @@
 /* BOUTON COMMANDER */
 
 .commander{
-    display: flex;
-    justify-content: center;
-    margin:32px 0;
-    &__btn{
-        padding:15px 30px;
-        @include mainbtn;
-    }   
+  display: flex;
+  justify-content: center;
+  padding:40px 0;
+  &__btn{
+      padding:15px 30px;
+      @include mainbtn;
+  }   
 }
 
 @media screen and (min-width: 1024px){
